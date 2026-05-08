@@ -1,61 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Lost in the Woods — NomadAI</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sand:#e8d5b7;--sage:#8aac7a;--tan:#c4a06a;--dark:#1c2820;--darker:#151e18;--card:#2a3830;--muted:#7a9a88}
-body{font-family:'Nunito',sans-serif;background:var(--darker);color:var(--sand);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · NomadAI</title>
+  <meta name="description" content="This trailhead doesn't exist. Head back to NomadAI." />
 
-.logo{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:18px;color:var(--sand);margin-bottom:48px;text-decoration:none;}
+  <link rel="icon" type="image/jpeg" href="/app-icon.jpg" />
+  <link rel="apple-touch-icon" href="/app-icon.jpg" />
 
-.scene{font-size:72px;margin-bottom:24px;animation:sway 3s ease-in-out infinite;}
-@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-.code{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:12px;}
-h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,48px);font-weight:900;color:var(--sand);margin-bottom:14px;line-height:1.15;}
-h1 em{color:var(--sage);font-style:italic;}
-p{font-size:15px;color:var(--muted);line-height:1.75;max-width:400px;margin:0 auto 40px;}
+  <style>
+    :root {
+      --bg: #1a1612;
+      --bg-darker: #14110d;
+      --bark: #2a2520;
+      --sand: #ede4d3;
+      --sand-dim: #c9bfae;
+      --muted: #968a78;
+      --faint: #6b6358;
+      --clay: #c4825e;
+      --clay-soft: #d99a76;
+      --clay-line: rgba(196, 130, 94, 0.28);
+      --moss: #8a9a7a;
+      --line: rgba(237, 228, 211, 0.10);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-.actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
-.btn-primary{background:var(--tan);color:var(--darker);padding:14px 32px;border-radius:50px;font-weight:800;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .2s,opacity .2s;}
-.btn-primary:hover{transform:translateY(-2px);opacity:.92;}
-.btn-secondary{background:rgba(255,255,255,0.06);color:var(--sand);border:1.5px solid rgba(255,255,255,0.12);padding:14px 32px;border-radius:50px;font-weight:700;font-size:14px;text-decoration:none;transition:background .2s;}
-.btn-secondary:hover{background:rgba(255,255,255,0.1);}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-.footer-note{margin-top:56px;font-size:11px;color:var(--muted);}
-.footer-note a{color:var(--muted);text-decoration:none;font-weight:700;}
-.footer-note a:hover{color:var(--tan);}
-</style>
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--sand);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Nav */
+    nav {
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--sand);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo-text {
+      font-family: 'Fraunces', serif;
+      font-size: 18px;
+      font-weight: 500;
+      font-variation-settings: "opsz" 24;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-back {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.4s var(--ease-out);
+    }
+
+    .nav-back:hover { color: var(--clay); }
+
+    /* Main */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+    }
+
+    .panel {
+      max-width: 520px;
+      text-align: center;
+      animation: fadeUp 0.9s var(--ease-out) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--moss);
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(48px, 9vw, 88px);
+      font-weight: 500;
+      font-variation-settings: "opsz" 144;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: var(--sand);
+      margin-bottom: 24px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--clay);
+      font-weight: 400;
+    }
+
+    .body {
+      font-size: 17px;
+      color: var(--sand-dim);
+      line-height: 1.65;
+      margin-bottom: 40px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: var(--clay);
+      color: var(--bg-darker);
+      text-decoration: none;
+      border-radius: 999px;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+      transition: background 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+    }
+
+    .cta:hover {
+      background: var(--clay-soft);
+      transform: translateY(-1px);
+    }
+
+    .cta-arrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 32px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    footer .sep { margin: 0 10px; opacity: 0.5; }
+
+    footer a {
+      color: var(--faint);
+      text-decoration: none;
+      transition: color 0.4s var(--ease-out);
+    }
+
+    footer a:hover { color: var(--clay); }
+
+    @media (max-width: 600px) {
+      nav { padding: 20px; }
+      main { padding: 32px 24px; }
+      footer { padding: 20px; }
+    }
+  </style>
 </head>
 <body>
 
-<a class="logo" href="/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 680" width="28" height="28">
-    <rect x="90" y="90" width="500" height="500" rx="110" fill="#8aac7a"/>
-    <polygon points="340,180 530,480 150,480" fill="#d4706a"/>
-    <polygon points="340,310 400,480 280,480" fill="#5a7a4a"/>
-    <rect x="140" y="475" width="400" height="18" rx="9" fill="#5a7a4a" opacity="0.6"/>
-  </svg>
-  NomadAI
-</a>
+  <nav>
+    <a href="/" class="logo">
+      <img src="/app-icon.jpg" alt="" class="logo-icon" />
+      <span class="logo-text">NomadAI</span>
+    </a>
+    <a href="/" class="nav-back">← Home</a>
+  </nav>
 
-<div class="scene">🌲</div>
-<div class="code">404 — Page not found</div>
-<h1>Looks like you took<br>a wrong <em>trail.</em></h1>
-<p>This page doesn't exist — but your next campsite does. Head back and let NomadAI find it.</p>
+  <main>
+    <div class="panel">
+      <div class="eyebrow">404 · Off the map</div>
+      <h1>This trailhead <em>doesn't&nbsp;exist.</em></h1>
+      <p class="body">
+        You wandered off the path. The page you're looking for has been moved,
+        renamed, or never existed in the first place.
+      </p>
+      <a href="/" class="cta">
+        Back to base camp
+        <span class="cta-arrow">→</span>
+      </a>
+    </div>
+  </main>
 
-<div class="actions">
-  <a href="/app" class="btn-primary">🏕️ Find my camp</a>
-  <a href="/" class="btn-secondary">← Back to home</a>
-</div>
-
-<div class="footer-note">
-  <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="mailto:hello@nomadai.us">Contact</a>
-</div>
+  <footer>
+    <span>© 2026 NomadAI</span>
+    <span class="sep">·</span>
+    <a href="/privacy">Privacy</a>
+    <span class="sep">·</span>
+    <a href="/terms">Terms</a>
+  </footer>
 
 </body>
 </html>
