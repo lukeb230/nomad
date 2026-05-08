@@ -61,9 +61,8 @@ main{
 .logo-mark{
   width:32px;height:32px;
   border-radius:9px;
-  background:linear-gradient(135deg,var(--sage),var(--tan));
-  display:inline-flex;align-items:center;justify-content:center;
-  color:var(--darker);font-size:18px;font-weight:900;
+  object-fit:cover;
+  display:block;
   box-shadow:0 6px 18px rgba(196,160,106,0.25);
 }
 
@@ -162,7 +161,7 @@ footer .copyright{display:block;margin-top:14px;font-size:12px;color:rgba(122,15
 <body>
 <main>
   <div class="logo">
-    <span class="logo-mark">N</span>
+    <img class="logo-mark" src="/app-icon.jpg" alt="NomadAI app icon" width="32" height="32" />
     NomadAI
   </div>
 
