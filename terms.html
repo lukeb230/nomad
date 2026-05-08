@@ -4,74 +4,343 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Terms of Service — NomadAI</title>
+<meta name="description" content="The terms governing use of NomadAI." />
 <link rel="canonical" href="https://nomadai.us/terms" />
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/jpeg" href="/app-icon.jpg" />
+<link rel="apple-touch-icon" href="/app-icon.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..900;1,9..144,600..900&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sand:#e8d5b7;--tan:#c4a06a;--dark:#1c2820;--darker:#151e18;--card:#2a3830;--muted:#7a9a88;}
-body{font-family:'Nunito',sans-serif;background:var(--darker);color:var(--sand);line-height:1.7;padding:0;}
-nav{padding:18px 32px;background:rgba(28,40,32,0.95);border-bottom:1px solid rgba(138,172,122,0.12);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
-.nav-logo{font-weight:800;font-size:17px;color:var(--sand);text-decoration:none;}
-.nav-back{color:var(--tan);text-decoration:none;font-weight:700;font-size:13px;}
-.container{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
-h1{font-size:28px;font-weight:900;color:var(--sand);margin-bottom:8px;}
-.date{font-size:13px;color:var(--muted);margin-bottom:40px;}
-h2{font-size:16px;font-weight:800;color:var(--tan);margin:32px 0 10px;text-transform:uppercase;letter-spacing:.06em;}
-p{font-size:14px;color:#c8b89a;margin-bottom:14px;}
-ul{font-size:14px;color:#c8b89a;margin:0 0 14px 20px;}
-li{margin-bottom:6px;}
-a{color:var(--tan);}
-.footer{text-align:center;padding:32px;font-size:12px;color:var(--muted);}
+:root{
+  --bg:#1a201a;
+  --bg-darker:#141911;
+  --bark:#2a241c;
+  --sand:#e8d5b7;
+  --sand-dim:#c8b89a;
+  --muted:#8a8275;
+  --faint:#5a5248;
+  --clay:#c4825e;
+  --clay-soft:rgba(196,130,94,0.14);
+  --clay-line:rgba(196,130,94,0.32);
+  --moss:#8aac7a;
+  --line:rgba(232,213,183,0.10);
+  --ease-out:cubic-bezier(.22,.61,.36,1);
+}
+html,body{height:100%}
+body{
+  font-family:'Inter Tight','-apple-system',BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--sand);
+  line-height:1.7;
+  letter-spacing:-0.005em;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ───── Nav ───── */
+nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 24px;
+  background:rgba(20,25,17,0.88);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:10;
+}
+.nav-logo{
+  display:inline-flex;align-items:center;gap:10px;
+  text-decoration:none;
+  color:var(--sand);
+  font-weight:700;font-size:15px;letter-spacing:0;
+}
+.nav-logo img{
+  width:26px;height:26px;border-radius:7px;object-fit:cover;
+  box-shadow:0 4px 14px rgba(196,130,94,0.20);
+}
+.nav-back{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--clay);
+  text-decoration:none;
+  transition:opacity .15s var(--ease-out);
+}
+.nav-back:hover{opacity:.78}
+
+/* ───── Document ───── */
+.container{
+  max-width:680px;margin:0 auto;
+  padding:64px 24px 96px;
+}
+
+h1{
+  font-family:'Fraunces',serif;
+  font-optical-sizing:auto;
+  font-size:clamp(34px,5.5vw,52px);
+  font-weight:600;
+  line-height:1.06;
+  letter-spacing:-0.02em;
+  color:var(--sand);
+  margin-bottom:14px;
+}
+h1 em{color:var(--clay);font-style:italic;font-weight:600}
+
+.date{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:42px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.date::before{
+  content:'';
+  width:5px;height:5px;border-radius:50%;
+  background:var(--moss);
+}
+
+.intro{
+  font-size:16px;
+  color:var(--sand-dim);
+  line-height:1.65;
+  margin-bottom:48px;
+  padding-bottom:32px;
+  border-bottom:1px solid var(--line);
+}
+
+section + section{margin-top:40px}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+.eyebrow::before{
+  content:'';width:5px;height:5px;border-radius:50%;background:var(--moss);
+}
+
+h2{
+  font-family:'Fraunces',serif;
+  font-optical-sizing:auto;
+  font-size:clamp(22px,3vw,28px);
+  font-weight:600;
+  line-height:1.18;
+  letter-spacing:-0.01em;
+  color:var(--sand);
+  margin-bottom:16px;
+}
+h2 em{color:var(--clay);font-style:italic;font-weight:600}
+
+p{
+  font-size:15px;
+  color:var(--sand-dim);
+  margin-bottom:14px;
+  line-height:1.65;
+}
+
+ul{
+  font-size:15px;
+  color:var(--sand-dim);
+  margin:0 0 16px 0;
+  list-style:none;
+}
+li{
+  position:relative;
+  padding-left:18px;
+  margin-bottom:10px;
+  line-height:1.65;
+}
+li::before{
+  content:'';
+  position:absolute;
+  left:0;top:11px;
+  width:6px;height:1.5px;
+  background:var(--clay);
+  opacity:.7;
+}
+li strong{color:var(--sand);font-weight:700}
+
+a{
+  color:var(--clay);
+  text-decoration:underline;
+  text-decoration-color:var(--clay-line);
+  text-underline-offset:2px;
+  transition:color .15s var(--ease-out),text-decoration-color .15s var(--ease-out);
+}
+a:hover{
+  color:var(--sand);
+  text-decoration-color:var(--clay);
+}
+
+em{font-style:italic}
+
+/* ───── Footer ───── */
+footer{
+  text-align:center;
+  padding:32px 24px 40px;
+  border-top:1px solid var(--line);
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--faint);
+}
+footer a{
+  color:var(--sand-dim);
+  text-decoration:none;
+  margin:0 8px;
+  transition:color .15s var(--ease-out);
+}
+footer a:hover{color:var(--clay)}
+footer .sep{color:var(--faint)}
+
+@media (max-width:520px){
+  .container{padding:48px 20px 64px}
+  nav{padding:14px 20px}
+}
 </style>
 </head>
 <body>
+
 <nav>
-  <a class="nav-logo" href="/">NomadAI 🏕️</a>
-  <a class="nav-back" href="/">← Back to home</a>
+  <a class="nav-logo" href="/">
+    <img src="/app-icon.jpg" alt="NomadAI" width="26" height="26" />
+    NomadAI
+  </a>
+  <a class="nav-back" href="/">← Home</a>
 </nav>
+
 <div class="container">
-  <h1>Terms of Service</h1>
-  <div class="date">Last updated: March 18, 2026</div>
 
-  <p>By using NomadAI at nomadai.us, you agree to these Terms of Service. Please read them carefully.</p>
+  <h1>Terms of <em>Service.</em></h1>
+  <div class="date">Last updated · May 8, 2026</div>
 
-  <h2>Use of the Service</h2>
-  <p>NomadAI is a campsite discovery tool powered by AI. You may use it for personal, non-commercial purposes. You agree not to:</p>
-  <ul>
-    <li>Use the app to generate false, misleading, or harmful campsite information.</li>
-    <li>Attempt to reverse-engineer, scrape, or abuse the AI search system.</li>
-    <li>Use the service in any way that violates applicable laws or regulations.</li>
-    <li>Share, sell, or transfer your account to another person.</li>
-  </ul>
+  <p class="intro">
+    By using the NomadAI iOS app and/or this site (collectively, the "Service"), you agree to these Terms of Service. Please read them carefully — they include disclaimers of liability, an indemnification obligation, and a community-content license that affect your legal rights.
+  </p>
 
-  <h2>AI-Generated Content</h2>
-  <p>Campsite recommendations are generated by AI and may not be perfectly accurate. Always verify campsite availability, access conditions, fees, and regulations before visiting. NomadAI is not responsible for outdated, incorrect, or incomplete campsite information.</p>
-  <p>You are responsible for your own safety when camping. Research road conditions, weather, fire restrictions, and permit requirements independently before any trip.</p>
+  <section>
+    <span class="eyebrow">Use of the service</span>
+    <h2>Using <em>NomadAI.</em></h2>
+    <p>NomadAI is an AI-assisted campsite and overland route planner. You may use it for personal, non-commercial purposes. You agree not to:</p>
+    <ul>
+      <li>Use the Service to generate, post, or share false, misleading, or harmful campsite information.</li>
+      <li>Attempt to reverse-engineer, scrape, or otherwise abuse the AI search or Edge Function endpoints.</li>
+      <li>Circumvent or evade rate limits, authentication checks, or other technical safeguards.</li>
+      <li>Use the Service in any way that violates applicable laws, regulations, or the rights of others.</li>
+      <li>Share, sell, or transfer your account to another person.</li>
+      <li>Use the Service to spam, harass, or abuse other users via reviews, reports, or any other community feature.</li>
+    </ul>
+  </section>
 
-  <h2>User Accounts</h2>
-  <p>You are responsible for maintaining the security of your account. You must provide accurate information when creating an account. We reserve the right to suspend or terminate accounts that violate these terms.</p>
+  <section>
+    <span class="eyebrow">Eligibility</span>
+    <h2>Who can <em>use it.</em></h2>
+    <p>You must be at least 13 years old to use NomadAI. By using the Service, you represent that you meet this requirement. If you are under the age of majority in your jurisdiction, your parent or guardian must agree to these Terms on your behalf and supervise your use.</p>
+  </section>
 
-  <h2>User Content</h2>
-  <p>Any notes, ratings, or content you create within NomadAI remains yours. By using the share feature, you grant us a limited license to display that campsite information publicly via share links.</p>
+  <section>
+    <span class="eyebrow">AI content</span>
+    <h2>AI-generated <em>content.</em></h2>
+    <p>Campsite recommendations, route plans, and other AI-generated content may be inaccurate, incomplete, or outdated. Always verify campsite availability, access conditions, fees, fire bans, road conditions, and applicable regulations before visiting. NomadAI is not responsible for outdated, incorrect, or incomplete information surfaced by the AI or any third-party data source.</p>
+    <p>You are responsible for your own safety when camping. Research road conditions, weather, fire restrictions, permit requirements, and wildlife advisories independently before any trip.</p>
+  </section>
 
-  <h2>Disclaimer of Warranties</h2>
-  <p>NomadAI is provided "as is" without warranties of any kind, express or implied. We do not guarantee that the service will be uninterrupted, error-free, or that campsite data will be accurate or up to date.</p>
+  <section>
+    <span class="eyebrow">Accounts</span>
+    <h2>User <em>accounts.</em></h2>
+    <p>You are responsible for maintaining the security of your account credentials. You must provide accurate information when creating an account. You may delete your account at any time from <strong>Settings → Account → Delete account</strong> within the app — this permanently removes your reviews, profile, saved spots, and trips, and the action cannot be undone.</p>
+    <p>We reserve the right to suspend or terminate accounts that violate these Terms or our community guidelines, at our sole discretion and without prior notice in cases of serious violations.</p>
+  </section>
 
-  <h2>Limitation of Liability</h2>
-  <p>To the fullest extent permitted by law, NomadAI and its creators shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service, including any injuries, property damage, or losses incurred during camping trips planned using our app.</p>
+  <section>
+    <span class="eyebrow">Your content</span>
+    <h2>User content &amp; <em>community reviews.</em></h2>
+    <p>Any notes, ratings, reviews, photos, and other content you create within NomadAI ("User Content") remains yours. By submitting User Content, you grant NomadAI a non-exclusive, worldwide, royalty-free, transferable license to host, store, display, reproduce, modify (for formatting and moderation), and distribute that content as needed to operate the Service.</p>
+    <p>For community reviews specifically: by submitting a review, you grant other users of NomadAI the right to view it. Reviews are explicitly stored in a public-read database table — your display name, star rating, note text, and the campsite the review relates to will be visible to all users of the Service.</p>
+    <p>You represent that you own or have the necessary rights to all User Content you submit, and that it does not infringe on anyone's rights or violate applicable laws.</p>
+    <p>You may edit or delete your own User Content at any time from within the app. Deleting your account permanently removes all of your User Content from the Service.</p>
+  </section>
 
-  <h2>Third-Party Services</h2>
-  <p>NomadAI uses third-party services including Anthropic (AI), Supabase (database), and Vercel (hosting). Your use of NomadAI is also subject to their respective terms of service.</p>
+  <section>
+    <span class="eyebrow">Community guidelines</span>
+    <h2>Objectionable content &amp; <em>moderation.</em></h2>
+    <p>You agree not to post, share, or transmit User Content that is unlawful, threatening, abusive, harassing, defamatory, obscene, hateful, or that infringes on the rights of others. Specifically, reviews, reports, feedback messages, and other User Content must not contain:</p>
+    <ul>
+      <li>Hate speech, threats of violence, or content that targets people based on protected characteristics.</li>
+      <li>Sexually explicit material, illegal content, or content that promotes self-harm.</li>
+      <li>Personal information about other people (doxxing) without their consent.</li>
+      <li>Spam, unsolicited promotional content, or material designed to deceive.</li>
+      <li>Content that misrepresents campsite conditions in a way that could endanger other users.</li>
+    </ul>
+    <p>NomadAI provides tools for users to <strong>flag content</strong> as inappropriate via the Report flow on each review, and to <strong>block other users</strong> so their content is hidden from your view. Reviews that accumulate three or more reports are automatically hidden from public view pending review.</p>
+    <p>We commit to reviewing flagged content and removing material that violates these guidelines within 24 hours of receiving a credible report. We may, at our sole discretion, remove any content, suspend or terminate any account, and take any other action we deem appropriate to enforce these Terms.</p>
+  </section>
 
-  <h2>Changes to These Terms</h2>
-  <p>We may update these terms from time to time. Continued use of NomadAI after changes constitutes acceptance of the updated terms.</p>
+  <section>
+    <span class="eyebrow">Disclaimer</span>
+    <h2>Disclaimer of <em>warranties.</em></h2>
+    <p>The Service is provided "as is" and "as available" without warranties of any kind, express or implied, including without limitation warranties of merchantability, fitness for a particular purpose, non-infringement, or accuracy. We do not warrant that the Service will be uninterrupted, error-free, secure, or that campsite or routing data will be accurate or up to date.</p>
+  </section>
 
-  <h2>Governing Law</h2>
-  <p>These terms are governed by the laws of the State of Texas, United States, without regard to conflict of law principles.</p>
+  <section>
+    <span class="eyebrow">Liability</span>
+    <h2>Limitation of <em>liability.</em></h2>
+    <p>To the fullest extent permitted by law, NomadAI and its creators shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, data, or goodwill, arising from or related to your use of the Service. This includes, without limitation, any injuries, illnesses, property damage, citations, fines, or losses incurred during camping trips, route travel, or other activities planned using the Service.</p>
+    <p>Our total cumulative liability for any claim arising from your use of the Service shall not exceed one hundred U.S. dollars (US$100), or the amount you have paid us in the twelve months preceding the claim, whichever is greater.</p>
+  </section>
 
-  <h2>Contact</h2>
-  <p>Questions about these terms? Contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
+  <section>
+    <span class="eyebrow">Your obligation</span>
+    <h2><em>Indemnification.</em></h2>
+    <p>You agree to indemnify, defend, and hold harmless NomadAI and its creators, employees, and contractors from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising from or related to: (a) your use of the Service; (b) your User Content; (c) your violation of these Terms; or (d) your violation of any third-party right, including any intellectual property right or privacy right.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Apple App Store</span>
+    <h2>Apple <em>terms.</em></h2>
+    <p>If you obtained the NomadAI iOS app through Apple's App Store, you acknowledge that these Terms are between you and NomadAI only — not Apple — and that NomadAI, not Apple, is solely responsible for the iOS app and its content.</p>
+    <p>Apple has no obligation to provide any maintenance or support for the app. In the event of any failure of the app to conform to any applicable warranty, you may notify Apple, who will refund any purchase price you paid for the app (if any); to the maximum extent permitted by applicable law, Apple has no other warranty obligation with respect to the app.</p>
+    <p>Apple and its subsidiaries are third-party beneficiaries of these Terms, and upon your acceptance, will have the right to enforce these Terms against you.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Third-party services</span>
+    <h2>Third-party <em>services.</em></h2>
+    <p>NomadAI relies on a number of third-party services to deliver core features (AI inference, database, storage, photo proxying, weather, public-land alerts, crash reporting, analytics, and authentication). The full list of providers and what data each receives is documented in our <a href="/privacy">Privacy Policy</a>. Your use of NomadAI is also subject to the applicable terms of those providers.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Updates</span>
+    <h2>Changes to <em>these terms.</em></h2>
+    <p>We may update these Terms from time to time. The "Last updated" date at the top reflects the most recent change. Material changes will be communicated through the app or this site. Continued use of the Service after changes take effect constitutes acceptance of the updated Terms.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Severability &amp; entire agreement</span>
+    <h2>Final <em>provisions.</em></h2>
+    <p>If any provision of these Terms is held invalid or unenforceable by a court of competent jurisdiction, the remaining provisions will remain in full force and effect, and the invalid or unenforceable provision will be interpreted to most closely reflect the original intent.</p>
+    <p>These Terms, together with our <a href="/privacy">Privacy Policy</a>, constitute the entire agreement between you and NomadAI regarding the Service and supersede any prior agreements or understandings.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Jurisdiction</span>
+    <h2>Governing <em>law.</em></h2>
+    <p>These Terms are governed by the laws of the State of Texas, United States, without regard to conflict-of-law principles. You agree that any dispute arising from these Terms or your use of the Service shall be resolved in the state or federal courts located in Texas, and you consent to the personal jurisdiction of those courts.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Get in touch</span>
+    <h2><em>Contact</em> us.</h2>
+    <p>Questions about these Terms? Contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
+  </section>
+
 </div>
-<div class="footer">© 2026 NomadAI · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
+
+<footer>
+  © 2026 NomadAI <span class="sep">·</span>
+  <a href="/privacy">Privacy</a> <span class="sep">·</span>
+  <a href="/terms">Terms</a>
+</footer>
+
 </body>
 </html>
