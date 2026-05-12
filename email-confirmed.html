@@ -3,137 +3,201 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Email confirmed — NomadAI</title>
-<meta name="description" content="Your NomadAI email is confirmed. You can head back to the app now." />
+<title>Email confirmed — Nomad</title>
+<meta name="description" content="Your Nomad email is confirmed. Head back to the app to finish signing in." />
 <meta name="robots" content="noindex"/>
 <link rel="canonical" href="https://nomadai.us/email-confirmed" />
 <link rel="icon" type="image/jpeg" href="/app-icon.jpg" />
 <link rel="apple-touch-icon" href="/app-icon.jpg" />
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..900;1,9..144,600..900&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
+  --bg:#1a201a;
+  --bg-darker:#141911;
+  --bark:#2a241c;
+  --bark-hi:#332b22;
   --sand:#e8d5b7;
   --sand-dim:#c8b89a;
-  --tan:#c4a06a;
-  --sage:#8aac7a;
-  --dark:#1c2820;
-  --darker:#151e18;
-  --card:#2a3830;
-  --muted:#7a9a88;
+  --muted:#8a8275;
+  --faint:#5a5248;
+  --clay:#c4825e;
+  --clay-soft:rgba(196,130,94,0.14);
+  --clay-line:rgba(196,130,94,0.32);
+  --clay-ink:#1a1408;
+  --moss:#8aac7a;
+  --line:rgba(232,213,183,0.10);
+  --ease-out:cubic-bezier(.22,.61,.36,1);
 }
+html,body{height:100%}
 body{
-  font-family:'Nunito',sans-serif;
-  background:var(--darker);
-  color:var(--sand);
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 24px;
-  line-height:1.5;
+  font-family:'Inter Tight','-apple-system',BlinkMacSystemFont,sans-serif;
+  background:var(--bg);color:var(--sand);
+  display:flex;flex-direction:column;min-height:100vh;
+  font-feature-settings:'ss01' 1;letter-spacing:-0.005em;
 }
 
+/* ───── Logo header ───── */
+.logo-row{padding:28px 24px 0;display:flex;justify-content:center}
 .logo{
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  font-weight:800;font-size:18px;color:var(--sand);
-  margin-bottom:48px;text-decoration:none;
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:700;font-size:16px;color:var(--sand);
+  text-decoration:none;letter-spacing:0;
+}
+.logo-mark{
+  width:30px;height:30px;border-radius:8px;object-fit:cover;display:block;
+  box-shadow:0 6px 18px rgba(196,130,94,0.22);
 }
 
-/* Big check medallion — sage tinted, matches the brand */
+/* ───── Hero ───── */
+.hero{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:48px 24px 72px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(196,130,94,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(196,130,94,0.06) 0%, transparent 60%),
+    var(--bg);
+}
+
+/* ───── Check medallion ───── */
 .medallion{
   width:96px;height:96px;border-radius:50%;
-  background:rgba(138,172,122,0.16);
-  border:1.5px solid rgba(138,172,122,0.45);
+  background:var(--clay-soft);
+  border:1.5px solid var(--clay-line);
   display:flex;align-items:center;justify-content:center;
   margin-bottom:32px;
-  animation:pop .5s cubic-bezier(.22,.61,.36,1);
+  animation:pop .55s var(--ease-out) both;
+  position:relative;
+}
+.medallion::after{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:1px solid rgba(196,130,94,0.18);
+  animation:ring 1.4s var(--ease-out) .4s both;
 }
 @keyframes pop{
-  0%{opacity:0;transform:scale(.7)}
-  60%{transform:scale(1.04)}
+  0%{opacity:0;transform:scale(.65)}
+  60%{transform:scale(1.06)}
   100%{opacity:1;transform:scale(1)}
 }
-.medallion svg{width:42px;height:42px;stroke:var(--sage);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;}
-
-.code{
-  font-size:11px;font-weight:800;text-transform:uppercase;
-  letter-spacing:.16em;color:var(--muted);margin-bottom:12px;
+@keyframes ring{
+  0%{opacity:0;transform:scale(.85)}
+  100%{opacity:1;transform:scale(1.1)}
 }
-h1{
-  font-size:clamp(28px,5vw,42px);font-weight:900;color:var(--sand);
-  margin-bottom:14px;line-height:1.15;
-}
-h1 em{color:var(--sage);font-style:italic;}
-p{
-  font-size:15px;color:var(--sand-dim);line-height:1.75;
-  max-width:440px;margin:0 auto 36px;
+.medallion svg{
+  width:44px;height:44px;stroke:var(--clay);
+  stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;
 }
 
-.actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
-.btn-primary{
-  background:var(--tan);color:var(--darker);
-  padding:14px 30px;border-radius:50px;
-  font-weight:800;font-size:14px;text-decoration:none;
+/* ───── Type ───── */
+.eyebrow{
   display:inline-flex;align-items:center;gap:8px;
-  transition:transform .2s, opacity .2s;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;font-weight:600;color:var(--muted);
+  letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;
 }
-.btn-primary:hover{transform:translateY(-2px);opacity:.92;}
+.eyebrow::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:var(--moss);animation:pulse 1.6s infinite var(--ease-out);
+}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+h1{
+  font-family:'Fraunces','Cochin','Times New Roman',serif;font-optical-sizing:auto;
+  font-size:clamp(38px,7vw,62px);font-weight:600;line-height:1.06;
+  letter-spacing:-0.02em;color:var(--sand);max-width:680px;margin-bottom:22px;
+}
+h1 em{color:var(--clay);font-style:italic;font-weight:600}
+
+.sub{
+  font-size:clamp(15px,1.55vw,17px);color:var(--sand-dim);
+  max-width:480px;line-height:1.65;margin-bottom:42px;
+}
+
+/* ───── CTAs ───── */
+.cta-row{display:flex;flex-direction:column;align-items:center;gap:14px}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--clay);color:var(--clay-ink);
+  padding:15px 30px;border-radius:999px;
+  font-weight:700;font-size:14px;letter-spacing:.01em;text-decoration:none;
+  box-shadow:0 6px 24px rgba(196,130,94,0.26);
+  transition:transform .25s var(--ease-out),box-shadow .25s var(--ease-out);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(196,130,94,0.4)}
+.btn-primary:active{transform:translateY(0)}
+.btn-primary svg{width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
 .btn-secondary{
-  background:rgba(255,255,255,0.06);color:var(--sand);
-  border:1.5px solid rgba(255,255,255,0.12);
-  padding:14px 30px;border-radius:50px;
-  font-weight:700;font-size:14px;text-decoration:none;
-  transition:background .2s;
+  color:var(--sand-dim);text-decoration:none;font-size:13px;font-weight:600;
+  padding:10px 14px;transition:color .2s;
 }
-.btn-secondary:hover{background:rgba(255,255,255,0.1);}
+.btn-secondary:hover{color:var(--sand)}
 
+/* ───── Hint ───── */
 .hint{
-  margin-top:32px;font-size:12px;color:var(--muted);
-  max-width:380px;line-height:1.6;
+  margin-top:34px;font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--faint);max-width:380px;line-height:1.7;
 }
 
-.footer-note{
-  margin-top:56px;font-size:11px;color:var(--muted);
+/* ───── Footer ───── */
+footer{
+  padding:28px 24px;text-align:center;font-size:13px;color:var(--sand-dim);
+  border-top:1px solid var(--line);
 }
-.footer-note a{color:var(--muted);text-decoration:none;font-weight:700;}
-.footer-note a:hover{color:var(--tan);}
+footer a{color:var(--sand);text-decoration:none;margin:0 12px;font-weight:600;transition:color .15s}
+footer a:hover{color:var(--clay)}
+
+@media (max-width: 480px){
+  .hero{padding:32px 20px 56px}
+  .medallion{width:84px;height:84px;margin-bottom:24px}
+  .medallion svg{width:38px;height:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  .medallion,.medallion::after,.eyebrow::before{animation:none}
+}
 </style>
 </head>
 <body>
 
-<a class="logo" href="/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 680" width="28" height="28">
-    <rect x="90" y="90" width="500" height="500" rx="110" fill="#8aac7a"/>
-    <polygon points="340,180 530,480 150,480" fill="#d4706a"/>
-    <polygon points="340,310 400,480 280,480" fill="#5a7a4a"/>
-    <rect x="140" y="475" width="400" height="18" rx="9" fill="#5a7a4a" opacity="0.6"/>
-  </svg>
-  NomadAI
-</a>
-
-<div class="medallion" aria-hidden="true">
-  <svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg>
+<div class="logo-row">
+  <a class="logo" href="/">
+    <img class="logo-mark" src="/app-icon.jpg" alt="Nomad app icon" width="30" height="30" />
+    Nomad
+  </a>
 </div>
 
-<div class="code">Email Confirmed</div>
-<h1>You're all set,<br><em>head back to the app.</em></h1>
-<p>Your email has been verified. You can close this page and return to NomadAI to finish signing in.</p>
+<section class="hero">
+  <div class="medallion" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg>
+  </div>
 
-<div class="actions">
-  <a href="nomadai://" class="btn-primary">Open NomadAI</a>
-  <a href="/" class="btn-secondary">Back to home</a>
-</div>
+  <span class="eyebrow">Email confirmed</span>
+  <h1>You're <em>all set.</em></h1>
+  <p class="sub">
+    Your email is verified. Head back to the Nomad app to finish signing in.
+  </p>
 
-<div class="hint">
-  If the "Open NomadAI" button doesn't open the app, switch back to it manually — your email is already confirmed.
-</div>
+  <div class="cta-row">
+    <a class="btn-primary" href="nomadai://">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      Open Nomad
+    </a>
+    <a class="btn-secondary" href="/">Back to home</a>
+  </div>
 
-<div class="footer-note">
-  <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="mailto:hello@nomadai.us">Contact</a>
-</div>
+  <div class="hint">
+    If the button doesn't open the app,<br>switch back to it manually.
+  </div>
+</section>
+
+<footer>
+  <a href="/privacy">Privacy</a>
+  <a href="/terms">Terms</a>
+  <a href="mailto:hello@nomadai.us">Contact</a>
+</footer>
 
 </body>
 </html>
