@@ -4,337 +4,125 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Privacy Policy — NomadAI</title>
-<meta name="description" content="How NomadAI handles your data." />
 <link rel="canonical" href="https://nomadai.us/privacy" />
-<link rel="icon" type="image/jpeg" href="/app-icon.jpg" />
-<link rel="apple-touch-icon" href="/app-icon.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..900;1,9..144,600..900&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#1a201a;
-  --bg-darker:#141911;
-  --bark:#2a241c;
-  --sand:#e8d5b7;
-  --sand-dim:#c8b89a;
-  --muted:#8a8275;
-  --faint:#5a5248;
-  --clay:#c4825e;
-  --clay-soft:rgba(196,130,94,0.14);
-  --clay-line:rgba(196,130,94,0.32);
-  --moss:#8aac7a;
-  --line:rgba(232,213,183,0.10);
-  --ease-out:cubic-bezier(.22,.61,.36,1);
-}
-html,body{height:100%}
-body{
-  font-family:'Inter Tight','-apple-system',BlinkMacSystemFont,sans-serif;
-  background:var(--bg);
-  color:var(--sand);
-  line-height:1.7;
-  letter-spacing:-0.005em;
-  -webkit-font-smoothing:antialiased;
-}
-
-/* ───── Nav ───── */
-nav{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:18px 24px;
-  background:rgba(20,25,17,0.88);
-  backdrop-filter:saturate(180%) blur(14px);
-  -webkit-backdrop-filter:saturate(180%) blur(14px);
-  border-bottom:1px solid var(--line);
-  position:sticky;top:0;z-index:10;
-}
-.nav-logo{
-  display:inline-flex;align-items:center;gap:10px;
-  text-decoration:none;
-  color:var(--sand);
-  font-weight:700;font-size:15px;letter-spacing:0;
-}
-.nav-logo img{
-  width:26px;height:26px;border-radius:7px;object-fit:cover;
-  box-shadow:0 4px 14px rgba(196,130,94,0.20);
-}
-.nav-back{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--clay);
-  text-decoration:none;
-  transition:opacity .15s var(--ease-out);
-}
-.nav-back:hover{opacity:.78}
-
-/* ───── Document ───── */
-.container{
-  max-width:680px;margin:0 auto;
-  padding:64px 24px 96px;
-}
-
-h1{
-  font-family:'Fraunces',serif;
-  font-optical-sizing:auto;
-  font-size:clamp(34px,5.5vw,52px);
-  font-weight:600;
-  line-height:1.06;
-  letter-spacing:-0.02em;
-  color:var(--sand);
-  margin-bottom:14px;
-}
-h1 em{color:var(--clay);font-style:italic;font-weight:600}
-
-.date{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:42px;
-  display:inline-flex;align-items:center;gap:8px;
-}
-.date::before{
-  content:'';
-  width:5px;height:5px;border-radius:50%;
-  background:var(--moss);
-}
-
-.intro{
-  font-size:16px;
-  color:var(--sand-dim);
-  line-height:1.65;
-  margin-bottom:48px;
-  padding-bottom:32px;
-  border-bottom:1px solid var(--line);
-}
-
-section + section{margin-top:40px}
-
-.eyebrow{
-  display:inline-flex;align-items:center;gap:7px;
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:10px;
-}
-.eyebrow::before{
-  content:'';width:5px;height:5px;border-radius:50%;background:var(--moss);
-}
-
-h2{
-  font-family:'Fraunces',serif;
-  font-optical-sizing:auto;
-  font-size:clamp(22px,3vw,28px);
-  font-weight:600;
-  line-height:1.18;
-  letter-spacing:-0.01em;
-  color:var(--sand);
-  margin-bottom:16px;
-}
-h2 em{color:var(--clay);font-style:italic;font-weight:600}
-
-p{
-  font-size:15px;
-  color:var(--sand-dim);
-  margin-bottom:14px;
-  line-height:1.65;
-}
-
-ul{
-  font-size:15px;
-  color:var(--sand-dim);
-  margin:0 0 16px 0;
-  list-style:none;
-}
-li{
-  position:relative;
-  padding-left:18px;
-  margin-bottom:10px;
-  line-height:1.65;
-}
-li::before{
-  content:'';
-  position:absolute;
-  left:0;top:11px;
-  width:6px;height:1.5px;
-  background:var(--clay);
-  opacity:.7;
-}
-li strong{color:var(--sand);font-weight:700}
-
-a{
-  color:var(--clay);
-  text-decoration:underline;
-  text-decoration-color:var(--clay-line);
-  text-underline-offset:2px;
-  transition:color .15s var(--ease-out),text-decoration-color .15s var(--ease-out);
-}
-a:hover{
-  color:var(--sand);
-  text-decoration-color:var(--clay);
-}
-
-em{font-style:italic}
-
-/* ───── Footer ───── */
-footer{
-  text-align:center;
-  padding:32px 24px 40px;
-  border-top:1px solid var(--line);
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--faint);
-}
-footer a{
-  color:var(--sand-dim);
-  text-decoration:none;
-  margin:0 8px;
-  transition:color .15s var(--ease-out);
-}
-footer a:hover{color:var(--clay)}
-footer .sep{color:var(--faint)}
-
-@media (max-width:520px){
-  .container{padding:48px 20px 64px}
-  nav{padding:14px 20px}
+:root{--sand:#e8d5b7;--tan:#c4a06a;--dark:#1c2820;--darker:#151e18;--card:#2a3830;--muted:#7a9a88;--body:#c8b89a;--nav-bg:rgba(28,40,32,0.95);}
+body{font-family:'Nunito',sans-serif;background:var(--darker);color:var(--sand);line-height:1.7;padding:0;}
+nav{padding:18px 32px;background:var(--nav-bg);border-bottom:1px solid rgba(138,172,122,0.12);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+.nav-logo{font-weight:800;font-size:17px;color:var(--sand);text-decoration:none;}
+.nav-back{color:var(--tan);text-decoration:none;font-weight:700;font-size:13px;}
+.container{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+h1{font-size:28px;font-weight:900;color:var(--sand);margin-bottom:8px;}
+.date{font-size:13px;color:var(--muted);margin-bottom:40px;}
+h2{font-size:16px;font-weight:800;color:var(--tan);margin:32px 0 10px;text-transform:uppercase;letter-spacing:.06em;}
+p{font-size:14px;color:var(--body);margin-bottom:14px;}
+ul{font-size:14px;color:var(--body);margin:0 0 14px 20px;}
+li{margin-bottom:6px;}
+a{color:var(--tan);}
+.footer{text-align:center;padding:32px;font-size:12px;color:var(--muted);}
+/* Light (parchment) palette — mirrors the iOS app's light theme.
+   Auto-applies via prefers-color-scheme. */
+@media (prefers-color-scheme: light){
+  :root{
+    --sand:#22312a;
+    --tan:#9c5b3a;
+    --dark:#e8dec3;
+    --darker:#f1e9d3;
+    --card:#ede1c5;
+    --muted:#5a6b5d;
+    --body:#4d5a52;
+    --nav-bg:rgba(241,233,211,0.95);
+  }
 }
 </style>
 </head>
 <body>
-
 <nav>
-  <a class="nav-logo" href="/">
-    <img src="/app-icon.jpg" alt="NomadAI" width="26" height="26" />
-    NomadAI
-  </a>
-  <a class="nav-back" href="/">← Home</a>
+  <a class="nav-logo" href="/">NomadAI 🏕️</a>
+  <a class="nav-back" href="/">← Back to home</a>
 </nav>
-
 <div class="container">
+  <h1>Privacy Policy</h1>
+  <div class="date">Last updated: May 8, 2026</div>
 
-  <h1>Privacy <em>Policy.</em></h1>
-  <div class="date">Last updated · May 8, 2026</div>
+  <p>NomadAI ("we", "our", or "us") operates the NomadAI iOS application and the marketing site at nomadai.us. This policy explains what data we collect, how we use it, and your rights as a user. The web application is no longer offered; iOS is the only product.</p>
 
-  <p class="intro">
-    NomadAI ("we", "our", or "us") operates the NomadAI iOS application and the marketing site at nomadai.us. This policy explains what data we collect, how we use it, and your rights as a user. The web application is no longer offered; iOS is the only product.
-  </p>
+  <h2>Information We Collect</h2>
+  <p>The app works without any account. If you sign in to enable cross-device sync and community reviews, we additionally collect a small set of account data. Categories:</p>
+  <ul>
+    <li><strong>Authentication identifiers (signed-in users only)</strong> — your email address and a Supabase user id. If you sign in with Apple and do not opt to hide your email, we receive your email; if you choose to hide it, we receive Apple's private relay address.</li>
+    <li><strong>Display name (signed-in users only)</strong> — captured from Apple Sign In's full name on first sign-in (formatted as "First L."), or derived from your email if you used email/password. Used to attribute community reviews. You can change it later.</li>
+    <li><strong>Location data</strong> — your approximate device coordinates, used only to find nearby campsites and to anchor weather lookups. Location data is sent to our servers only as part of a search query and is not stored linked to your account. The system-level CoreLocation permission can be revoked at any time in iOS Settings.</li>
+    <li><strong>Usage data (signed-in users)</strong> — saved campsites, visited spots, trip routes, your reviews (rating + note + visit date), and personal notes. Synced to your account so they appear on every device you sign into.</li>
+    <li><strong>Profile photo (signed-in users only)</strong> — if you upload an avatar, the image is stored in Supabase Storage and associated with your account. You can replace or remove it at any time in Account.</li>
+    <li><strong>Search session state</strong> — chat history and last search results, kept in memory for the lifetime of your search session and not transmitted to our servers as a separate record.</li>
+    <li><strong>Voice input (when you tap the microphone)</strong> — speech is processed via Apple's <em>SFSpeechRecognizer</em> framework, which may transmit audio to Apple's servers for transcription. We do not store or transmit the audio ourselves; we only receive the transcribed text, which is then handled like any other typed query.</li>
+    <li><strong>Feedback and bug reports</strong> — when you send a bug report or feature request via the in-app Help screen, we collect the body text you wrote, an optional contact email if you provided one, and basic diagnostic context (app version, iOS version, device model, your user id when signed in) to help us reproduce issues.</li>
+    <li><strong>Diagnostic and analytics events</strong> — we collect crash reports and a small number of non-fatal error events for debugging (via Sentry), and product-interaction events such as which features you use and how you move through the search-to-save funnel (via PostHog). See "Third-Party Services" below for what's stripped before sending.</li>
+  </ul>
 
-  <section>
-    <span class="eyebrow">What we collect</span>
-    <h2>Information <em>we collect.</em></h2>
-    <p>The app works without any account. If you sign in to enable cross-device sync and community reviews, we additionally collect a small set of account data. Categories:</p>
-    <ul>
-      <li><strong>Authentication identifiers (signed-in users only)</strong> — your email address and a Supabase user id. If you sign in with Apple and do not opt to hide your email, we receive your email; if you choose to hide it, we receive Apple's private relay address.</li>
-      <li><strong>Display name (signed-in users only)</strong> — captured from Apple Sign In's full name on first sign-in (formatted as "First L."), or derived from your email if you used email/password. Used to attribute community reviews. You can change it later.</li>
-      <li><strong>Location data</strong> — your approximate device coordinates, used only to find nearby campsites and to anchor weather lookups. Location data is sent to our servers only as part of a search query and is not stored linked to your account. The system-level CoreLocation permission can be revoked at any time in iOS Settings.</li>
-      <li><strong>Usage data (signed-in users)</strong> — saved campsites, visited spots, trip routes, your reviews (rating + note + visit date), and personal notes. Synced to your account so they appear on every device you sign into.</li>
-      <li><strong>Profile photo (signed-in users only)</strong> — if you upload an avatar, the image is stored in Supabase Storage and associated with your account. You can replace or remove it at any time in Account.</li>
-      <li><strong>Search session state</strong> — chat history and last search results, kept in memory for the lifetime of your search session and not transmitted to our servers as a separate record.</li>
-      <li><strong>Voice input (when you tap the microphone)</strong> — speech is processed via Apple's <em>SFSpeechRecognizer</em> framework, which may transmit audio to Apple's servers for transcription. We do not store or transmit the audio ourselves; we only receive the transcribed text, which is then handled like any other typed query.</li>
-      <li><strong>Feedback and bug reports</strong> — when you send a bug report or feature request via the in-app Help screen, we collect the body text you wrote, an optional contact email if you provided one, and basic diagnostic context (app version, iOS version, device model, your user id when signed in) to help us reproduce issues.</li>
-      <li><strong>Diagnostic and analytics events</strong> — we collect crash reports and a small number of non-fatal error events for debugging (via Sentry), and product-interaction events such as which features you use and how you move through the search-to-save funnel (via PostHog). See "Third-Party Services" below for what's stripped before sending.</li>
-    </ul>
-  </section>
+  <h2>How We Use Your Information</h2>
+  <ul>
+    <li>To provide AI-assisted campsite search and recommendations.</li>
+    <li>To sync your saved spots, trips, reviews, and preferences across your devices.</li>
+    <li>To display your reviews to other users in the community-review feature, attributed to your display name.</li>
+    <li>To moderate content (process flagged reviews, enforce blocks).</li>
+    <li>To deliver weather, park alerts, and place photos through the providers below.</li>
+  </ul>
 
-  <section>
-    <span class="eyebrow">How we use it</span>
-    <h2>How we <em>use</em> your information.</h2>
-    <ul>
-      <li>To provide AI-assisted campsite search and recommendations.</li>
-      <li>To sync your saved spots, trips, reviews, and preferences across your devices.</li>
-      <li>To display your reviews to other users in the community-review feature, attributed to your display name.</li>
-      <li>To moderate content (process flagged reviews, enforce blocks).</li>
-      <li>To deliver weather, park alerts, and place photos through the providers below.</li>
-    </ul>
-  </section>
+  <h2>Data Storage</h2>
+  <p>Account data is stored using Supabase. Data is encrypted in transit (TLS) and at rest. Per-user data is protected by row-level security so only you can write to your records and most reads are restricted to you. Community reviews are explicitly stored in a public-read table — by leaving a review you publish your display name, star rating, note text, and the campsite it relates to.</p>
 
-  <section>
-    <span class="eyebrow">Where it lives</span>
-    <h2>Data <em>storage.</em></h2>
-    <p>Account data is stored using Supabase. Data is encrypted in transit (TLS) and at rest. Per-user data is protected by row-level security so only you can write to your records and most reads are restricted to you. Community reviews are explicitly stored in a public-read table — by leaving a review you publish your display name, star rating, note text, and the campsite it relates to.</p>
-  </section>
+  <h2>Third-Party Services</h2>
+  <p>NomadAI sends limited data to a small number of third-party services to deliver core features and to help us debug and improve the app. We use first-party product analytics (PostHog) and crash reporting (Sentry) — neither shares your data with advertisers or data brokers. We do not use third-party advertising or cross-app trackers.</p>
+  <ul>
+    <li><strong>Supabase</strong> — hosts the database, authentication, edge functions, and avatar storage. Receives all account data described above. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy</a>.</li>
+    <li><strong>Anthropic (Claude)</strong> — receives your AI search query text along with anonymous coordinates. We send queries through our own server proxy; queries are not stored by us. <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic Privacy</a>.</li>
+    <li><strong>Sentry</strong> — receives crash reports and a small number of non-fatal error events (e.g. a sync failure) so we can debug the app. We strip your email address, IP address, and any URL query strings before sending. We do attach an opaque user identifier (your Supabase user id) when you're signed in so we can correlate errors per user. Used only for diagnostics. <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy</a>.</li>
+    <li><strong>PostHog</strong> — receives product-interaction events (which features you use, how you move through the search-to-save funnel, when you submit feedback). When signed in, events are tied to your opaque Supabase user id; otherwise anonymous. We never send raw search text, campsite names or identifiers, your email, or precise coordinates. Used only for our own first-party analytics — never shared with anyone or used for advertising. <a href="https://posthog.com/privacy" target="_blank">PostHog Privacy</a>.</li>
+    <li><strong>Open-Meteo</strong> — receives campsite coordinates only (no account info) for weather lookups. <a href="https://open-meteo.com/en/terms" target="_blank">Open-Meteo Terms</a>.</li>
+    <li><strong>Google Places (via our proxy)</strong> — receives campsite names and coordinates to retrieve photos. We never send your account info. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a>.</li>
+    <li><strong>National Park Service</strong> — public alerts API; receives only US state codes. <a href="https://www.nps.gov/aboutus/privacy.htm" target="_blank">NPS Privacy</a>.</li>
+    <li><strong>Recreation.gov (RIDB)</strong> — receives only coordinates + radius to retrieve federal campsite listings.</li>
+    <li><strong>Apple</strong> — Sign in with Apple authentication, plus on-device speech recognition for voice search (see Voice Input above). <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy</a>.</li>
+    <li><strong>Vercel</strong> — hosts this static marketing site. Receives standard web logs (IP, user agent) for the marketing pages only. The iOS app does not use Vercel.</li>
+  </ul>
+  <p>NomadAI does not sell your personal data and does not use it for advertising.</p>
 
-  <section>
-    <span class="eyebrow">Who else sees data</span>
-    <h2>Third-party <em>services.</em></h2>
-    <p>NomadAI sends limited data to a small number of third-party services to deliver core features and to help us debug and improve the app. We use first-party product analytics (PostHog) and crash reporting (Sentry) — neither shares your data with advertisers or data brokers. We do not use third-party advertising or cross-app trackers.</p>
-    <ul>
-      <li><strong>Supabase</strong> — hosts the database, authentication, edge functions, and avatar storage. Receives all account data described above. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy</a>.</li>
-      <li><strong>Anthropic (Claude)</strong> — receives your AI search query text along with anonymous coordinates. We send queries through our own server proxy; queries are not stored by us. <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic Privacy</a>.</li>
-      <li><strong>Sentry</strong> — receives crash reports and a small number of non-fatal error events (e.g. a sync failure) so we can debug the app. We strip your email address, IP address, and any URL query strings before sending. We do attach an opaque user identifier (your Supabase user id) when you're signed in so we can correlate errors per user. Used only for diagnostics. <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy</a>.</li>
-      <li><strong>PostHog</strong> — receives product-interaction events (which features you use, how you move through the search-to-save funnel, when you submit feedback). When signed in, events are tied to your opaque Supabase user id; otherwise anonymous. We never send raw search text, campsite names or identifiers, your email, or precise coordinates. Used only for our own first-party analytics — never shared with anyone or used for advertising. <a href="https://posthog.com/privacy" target="_blank">PostHog Privacy</a>.</li>
-      <li><strong>Open-Meteo</strong> — receives campsite coordinates only (no account info) for weather lookups. <a href="https://open-meteo.com/en/terms" target="_blank">Open-Meteo Terms</a>.</li>
-      <li><strong>Google Places (via our proxy)</strong> — receives campsite names and coordinates to retrieve photos. We never send your account info. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a>.</li>
-      <li><strong>National Park Service</strong> — public alerts API; receives only US state codes. <a href="https://www.nps.gov/aboutus/privacy.htm" target="_blank">NPS Privacy</a>.</li>
-      <li><strong>Recreation.gov (RIDB)</strong> — receives only coordinates + radius to retrieve federal campsite listings.</li>
-      <li><strong>Apple</strong> — Sign in with Apple authentication, plus on-device speech recognition for voice search (see Voice Input above). <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy</a>.</li>
-      <li><strong>Vercel</strong> — hosts this static marketing site. Receives standard web logs (IP, user agent) for the marketing pages only. The iOS app does not use Vercel.</li>
-    </ul>
-    <p>NomadAI does not sell your personal data and does not use it for advertising.</p>
-  </section>
+  <h2>Community Reviews</h2>
+  <p>When you submit a review, your display name, star rating, note text, and the campsite identifier are made publicly readable by all users of NomadAI. You can edit or delete your reviews at any time. If three or more users report a review, it is automatically hidden from public view; the author can still see it. We may permanently remove reviews that violate our community guidelines.</p>
 
-  <section>
-    <span class="eyebrow">Reviews</span>
-    <h2>Community <em>reviews.</em></h2>
-    <p>When you submit a review, your display name, star rating, note text, and the campsite identifier are made publicly readable by all users of NomadAI. You can edit or delete your reviews at any time. If three or more users report a review, it is automatically hidden from public view; the author can still see it. We may permanently remove reviews that violate our community guidelines.</p>
-  </section>
+  <h2>Reporting and Blocking</h2>
+  <p>Reports submitted via the Report flow are stored privately and used only for moderation. Blocking another user hides their reviews from your view; we do not notify the blocked user. The list of users you have blocked is private to you.</p>
 
-  <section>
-    <span class="eyebrow">Moderation</span>
-    <h2>Reporting <em>and blocking.</em></h2>
-    <p>Reports submitted via the Report flow are stored privately and used only for moderation. Blocking another user hides their reviews from your view; we do not notify the blocked user. The list of users you have blocked is private to you.</p>
-  </section>
+  <h2>Shared Spot Links</h2>
+  <p>When you create a share link (Saved → Share trip), a snapshot of the trip's stops (name, coordinates, fees, description) is stored to generate a shareable link. The snapshot is publicly accessible to anyone with the link.</p>
 
-  <section>
-    <span class="eyebrow">Sharing</span>
-    <h2>Shared spot <em>links.</em></h2>
-    <p>When you create a share link (Saved → Share trip), a snapshot of the trip's stops (name, coordinates, fees, description) is stored to generate a shareable link. The snapshot is publicly accessible to anyone with the link.</p>
-  </section>
+  <h2>Your Rights</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Access the personal data we hold about you.</li>
+    <li>Delete your account and all associated data. From the app: Settings → Account → Delete account. This permanently removes your reviews, profile, saved spots, and trips. The action cannot be undone.</li>
+    <li>Export the data you have stored with us (currently via emailed request — automated export is in development).</li>
+    <li>Withdraw consent at any time by signing out and uninstalling the app. Sign-out alone keeps cloud data; deleting your account purges it.</li>
+    <li>Revoke Sign in with Apple at any time in iOS Settings → Apple ID → Sign-In & Security → Apps Using Apple ID.</li>
+  </ul>
+  <p>For data-access or export requests, contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
 
-  <section>
-    <span class="eyebrow">Your control</span>
-    <h2>Your <em>rights.</em></h2>
-    <p>You have the right to:</p>
-    <ul>
-      <li>Access the personal data we hold about you.</li>
-      <li>Delete your account and all associated data. From the app: Settings → Account → Delete account. This permanently removes your reviews, profile, saved spots, and trips. The action cannot be undone.</li>
-      <li>Export the data you have stored with us (currently via emailed request — automated export is in development).</li>
-      <li>Withdraw consent at any time by signing out and uninstalling the app. Sign-out alone keeps cloud data; deleting your account purges it.</li>
-      <li>Revoke Sign in with Apple at any time in iOS Settings → Apple ID → Sign-In &amp; Security → Apps Using Apple ID.</li>
-    </ul>
-    <p>For data-access or export requests, contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
-  </section>
+  <h2>Children's Privacy</h2>
+  <p>NomadAI is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us and we will delete it.</p>
 
-  <section>
-    <span class="eyebrow">Kids</span>
-    <h2>Children's <em>privacy.</em></h2>
-    <p>NomadAI is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us and we will delete it.</p>
-  </section>
+  <h2>Data Retention</h2>
+  <p>We retain account data for as long as your account is active. When you delete your account, we permanently remove your account and personal data within 30 days. Backups containing residual copies may persist for an additional 30 days before being overwritten.</p>
 
-  <section>
-    <span class="eyebrow">How long</span>
-    <h2>Data <em>retention.</em></h2>
-    <p>We retain account data for as long as your account is active. When you delete your account, we permanently remove your account and personal data within 30 days. Backups containing residual copies may persist for an additional 30 days before being overwritten.</p>
-  </section>
+  <h2>Changes to This Policy</h2>
+  <p>We may update this policy from time to time. The "Last updated" date at the top reflects the most recent change.</p>
 
-  <section>
-    <span class="eyebrow">Updates</span>
-    <h2>Changes to <em>this policy.</em></h2>
-    <p>We may update this policy from time to time. The "Last updated" date at the top reflects the most recent change.</p>
-  </section>
-
-  <section>
-    <span class="eyebrow">Get in touch</span>
-    <h2><em>Contact</em> us.</h2>
-    <p>If you have questions about this privacy policy, contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
-  </section>
-
+  <h2>Contact</h2>
+  <p>If you have questions about this privacy policy, contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
 </div>
-
-<footer>
-  © 2026 NomadAI <span class="sep">·</span>
-  <a href="/privacy">Privacy</a> <span class="sep">·</span>
-  <a href="/terms">Terms</a>
-</footer>
-
+<div class="footer">© 2026 NomadAI · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
 </body>
 </html>
