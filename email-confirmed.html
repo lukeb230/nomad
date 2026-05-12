@@ -31,6 +31,36 @@
   --line:rgba(232,213,183,0.10);
   --ease-out:cubic-bezier(.22,.61,.36,1);
 }
+/* Light (parchment) palette — mirrors the iOS app's light theme.
+   Auto-applies via prefers-color-scheme. */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f1e9d3;
+    --bg-darker:#e8dec3;
+    --bark:#ede1c5;
+    --bark-hi:#e4d7b8;
+    --sand:#22312a;
+    --sand-dim:#4d5a52;
+    --muted:#7c7468;
+    --faint:#a89e8d;
+    --clay:#9c5b3a;
+    --clay-soft:rgba(156,91,58,0.14);
+    --clay-line:rgba(156,91,58,0.32);
+    --clay-ink:#fff5e6;
+    --moss:#4a7246;
+    --line:rgba(34,49,42,0.10);
+  }
+  .hero{
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(156,91,58,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(156,91,58,0.05) 0%, transparent 60%),
+      var(--bg);
+  }
+  .logo-mark{box-shadow:0 6px 18px rgba(156,91,58,0.18);}
+  .btn-primary{box-shadow:0 6px 24px rgba(156,91,58,0.22);}
+  .btn-primary:hover{box-shadow:0 8px 32px rgba(156,91,58,0.35);}
+  .medallion::after{border:1px solid rgba(156,91,58,0.18);}
+}
 html,body{height:100%}
 body{
   font-family:'Inter Tight','-apple-system',BlinkMacSystemFont,sans-serif;
