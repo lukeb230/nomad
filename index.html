@@ -36,6 +36,45 @@
   --line-soft:rgba(232,213,183,0.05);
   --ease-out:cubic-bezier(.22,.61,.36,1);
 }
+/* Light (parchment) palette — mirrors the iOS app's light theme. The
+   media query auto-applies whenever the user's OS is set to Light, so
+   no toggle is needed. CSS variables flip; everything that uses var()
+   updates without per-selector changes. The handful of selectors with
+   hardcoded rgba(196,130,94,…) (clay glows + dashed line) override
+   below to use the darker light-mode clay so the warmth still lands. */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f1e9d3;
+    --bg-darker:#e8dec3;
+    --bark:#ede1c5;
+    --bark-hi:#e4d7b8;
+    --sand:#22312a;
+    --sand-dim:#4d5a52;
+    --muted:#7c7468;
+    --faint:#a89e8d;
+    --clay:#9c5b3a;
+    --clay-soft:rgba(156,91,58,0.14);
+    --clay-line:rgba(156,91,58,0.32);
+    --clay-ink:#fff5e6;
+    --moss:#4a7246;
+    --line:rgba(34,49,42,0.10);
+    --line-soft:rgba(34,49,42,0.05);
+  }
+  .hero{
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(156,91,58,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(156,91,58,0.05) 0%, transparent 60%),
+      var(--bg);
+  }
+  .preview{background-image:radial-gradient(ellipse at center top, rgba(156,91,58,0.06) 0%, transparent 65%);}
+  .logo-mark{box-shadow:0 6px 18px rgba(156,91,58,0.18);}
+  .app-store{box-shadow:0 6px 24px rgba(156,91,58,0.22);}
+  .app-store:hover{box-shadow:0 8px 32px rgba(156,91,58,0.35);}
+  .tl-stop::before{border-left:1.5px dashed rgba(156,91,58,0.5);}
+  /* Phone screen "home indicator" pill: was light cream on dark; flip
+     to dark-on-light so it still reads on the parchment phone screen. */
+  .screen::after{background:rgba(34,49,42,0.22);}
+}
 html{scroll-behavior:smooth}
 html,body{height:100%}
 body{
