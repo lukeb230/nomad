@@ -1,6 +1,11 @@
 {
   "rewrites": [
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/terms", "destination": "/terms.html" }
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/email-confirmed", "destination": "/email-confirmed.html" }
+  ],
+  "routes": [
+    { "handle": "error" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
