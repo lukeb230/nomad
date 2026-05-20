@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Privacy Policy — NomadAI</title>
+<title>Privacy Policy — Nomad</title>
 <link rel="canonical" href="https://nomadai.us/privacy" />
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -11,7 +11,8 @@
 :root{--sand:#e8d5b7;--tan:#c4a06a;--dark:#1c2820;--darker:#151e18;--card:#2a3830;--muted:#7a9a88;--body:#c8b89a;--nav-bg:rgba(28,40,32,0.95);}
 body{font-family:'Nunito',sans-serif;background:var(--darker);color:var(--sand);line-height:1.7;padding:0;}
 nav{padding:18px 32px;background:var(--nav-bg);border-bottom:1px solid rgba(138,172,122,0.12);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
-.nav-logo{font-weight:800;font-size:17px;color:var(--sand);text-decoration:none;}
+.nav-logo{font-weight:800;font-size:17px;color:var(--sand);text-decoration:none;display:flex;align-items:center;gap:10px;}
+.nav-logo img{width:26px;height:26px;border-radius:7px;display:block;}
 .nav-back{color:var(--tan);text-decoration:none;font-weight:700;font-size:13px;}
 .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
 h1{font-size:28px;font-weight:900;color:var(--sand);margin-bottom:8px;}
@@ -40,14 +41,14 @@ a{color:var(--tan);}
 </head>
 <body>
 <nav>
-  <a class="nav-logo" href="/">NomadAI 🏕️</a>
+  <a class="nav-logo" href="/"><img src="/app-icon.jpg" alt=""/>Nomad</a>
   <a class="nav-back" href="/">← Back to home</a>
 </nav>
 <div class="container">
   <h1>Privacy Policy</h1>
-  <div class="date">Last updated: May 8, 2026</div>
+  <div class="date">Last updated: May 20, 2026</div>
 
-  <p>NomadAI ("we", "our", or "us") operates the NomadAI iOS application and the marketing site at nomadai.us. This policy explains what data we collect, how we use it, and your rights as a user. The web application is no longer offered; iOS is the only product.</p>
+  <p>Nomad ("we", "our", or "us") operates the Nomad iOS application and the marketing site at nomadai.us. This policy explains what data we collect, how we use it, and your rights as a user. The web application is no longer offered; iOS is the only product.</p>
 
   <h2>Information We Collect</h2>
   <p>The app works without any account. If you sign in to enable cross-device sync and community reviews, we additionally collect a small set of account data. Categories:</p>
@@ -76,7 +77,7 @@ a{color:var(--tan);}
   <p>Account data is stored using Supabase. Data is encrypted in transit (TLS) and at rest. Per-user data is protected by row-level security so only you can write to your records and most reads are restricted to you. Community reviews are explicitly stored in a public-read table — by leaving a review you publish your display name, star rating, note text, and the campsite it relates to.</p>
 
   <h2>Third-Party Services</h2>
-  <p>NomadAI sends limited data to a small number of third-party services to deliver core features and to help us debug and improve the app. We use first-party product analytics (PostHog) and crash reporting (Sentry) — neither shares your data with advertisers or data brokers. We do not use third-party advertising or cross-app trackers.</p>
+  <p>Nomad sends limited data to a small number of third-party services to deliver core features and to help us debug and improve the app. We use first-party product analytics (PostHog) and crash reporting (Sentry) — neither shares your data with advertisers or data brokers. We do not use third-party advertising or cross-app trackers.</p>
   <ul>
     <li><strong>Supabase</strong> — hosts the database, authentication, edge functions, and avatar storage. Receives all account data described above. <a href="https://supabase.com/privacy" target="_blank">Supabase Privacy</a>.</li>
     <li><strong>Anthropic (Claude)</strong> — receives your AI search query text along with anonymous coordinates. We send queries through our own server proxy; queries are not stored by us. <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic Privacy</a>.</li>
@@ -89,10 +90,10 @@ a{color:var(--tan);}
     <li><strong>Apple</strong> — Sign in with Apple authentication, plus on-device speech recognition for voice search (see Voice Input above). <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy</a>.</li>
     <li><strong>Vercel</strong> — hosts this static marketing site. Receives standard web logs (IP, user agent) for the marketing pages only. The iOS app does not use Vercel.</li>
   </ul>
-  <p>NomadAI does not sell your personal data and does not use it for advertising.</p>
+  <p>Nomad does not sell your personal data and does not use it for advertising.</p>
 
   <h2>Community Reviews</h2>
-  <p>When you submit a review, your display name, star rating, note text, and the campsite identifier are made publicly readable by all users of NomadAI. You can edit or delete your reviews at any time. If three or more users report a review, it is automatically hidden from public view; the author can still see it. We may permanently remove reviews that violate our community guidelines.</p>
+  <p>When you submit a review, your display name, star rating, note text, and the campsite identifier are made publicly readable by all users of Nomad. You can edit or delete your reviews at any time. If three or more users report a review, it is automatically hidden from public view; the author can still see it. We may permanently remove reviews that violate our community guidelines.</p>
 
   <h2>Reporting and Blocking</h2>
   <p>Reports submitted via the Report flow are stored privately and used only for moderation. Blocking another user hides their reviews from your view; we do not notify the blocked user. The list of users you have blocked is private to you.</p>
@@ -109,10 +110,10 @@ a{color:var(--tan);}
     <li>Withdraw consent at any time by signing out and uninstalling the app. Sign-out alone keeps cloud data; deleting your account purges it.</li>
     <li>Revoke Sign in with Apple at any time in iOS Settings → Apple ID → Sign-In & Security → Apps Using Apple ID.</li>
   </ul>
-  <p>For data-access or export requests, contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
+  <p>For data-access or export requests, contact us at <a href="mailto:support@nomadai.us">support@nomadai.us</a>.</p>
 
   <h2>Children's Privacy</h2>
-  <p>NomadAI is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us and we will delete it.</p>
+  <p>Nomad is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us and we will delete it.</p>
 
   <h2>Data Retention</h2>
   <p>We retain account data for as long as your account is active. When you delete your account, we permanently remove your account and personal data within 30 days. Backups containing residual copies may persist for an additional 30 days before being overwritten.</p>
@@ -121,8 +122,8 @@ a{color:var(--tan);}
   <p>We may update this policy from time to time. The "Last updated" date at the top reflects the most recent change.</p>
 
   <h2>Contact</h2>
-  <p>If you have questions about this privacy policy, contact us at <a href="mailto:hello@nomadai.us">hello@nomadai.us</a>.</p>
+  <p>If you have questions about this privacy policy, contact us at <a href="mailto:support@nomadai.us">support@nomadai.us</a>.</p>
 </div>
-<div class="footer">© 2026 NomadAI · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
+<div class="footer">© 2026 Nomad · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
 </body>
 </html>
